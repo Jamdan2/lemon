@@ -1,5 +1,6 @@
 mod env;
 
+#[derive(Debug, PartialEq, Clone)]
 pub enum Object {
     Null,
     Int(i32),

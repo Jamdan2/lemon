@@ -18,6 +18,6 @@ impl Env {
 
     pub fn get(&self, key: &str) -> Option<Object> {
         // Check later
-        self.map.get(key).map(|value| *value.clone())
+        self.map.get(key).map(|value| value.clone())
     }
 }
