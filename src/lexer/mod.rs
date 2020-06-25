@@ -4,11 +4,13 @@ use logos::Logos;
 #[allow(non_camel_case_types)]
 pub enum Token {
     #[error]
-    #[regex(r"[ \n]", logos::skip)]
+    #[regex(r"[\n]", logos::skip)]
     Error,
     #[regex(r"[\r]")]
-    NL,
-    #[regex(r" \t")]
+    NEXT,
+    #[regex(r"[ ]")]
+    SPACE,
+    #[regex(r"[\t]")]
     TAB,
     EOF,
     #[regex("[a-zA-Z]+", |lexer| lexer.slice().to_owned())]
