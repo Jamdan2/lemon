@@ -39,6 +39,8 @@ pub enum Token {
     COMMA,
     #[token(";")]
     SEMICOLON,
+    #[token(":")]
+    COLON,
     #[token("(")]
     LPAREN,
     #[token(")")]
