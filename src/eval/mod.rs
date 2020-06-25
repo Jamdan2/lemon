@@ -1,8 +1,9 @@
+mod env;
 
-pub enum Obj {
+pub enum Object {
     Null,
     Int(i32),
     Str(String),
     Bool(bool),
-    Return(Box<Obj>),
+    Return(Box<Object>),
 }
